@@ -5,15 +5,13 @@ used Easemob as Normal laravel facades
 
 ## Installation  
 
+* First:  
+
 ```
 composer require aobozhang/EasemobFacades
 ```
 
-```
-php artisan vendor:publish
-```
-
-## Configuration  
+* Second:  
 
 Modify "config\app.php"  
 
@@ -34,6 +32,11 @@ Modify "config\app.php"
     ];
 
 ```  
+* Third:  
+
+```
+php artisan vendor:publish
+```
 
 > <strong>Till now, you can use it </strong>  
 > Test Account Supply by [http://github/easemob/](http://github/easemob/)
