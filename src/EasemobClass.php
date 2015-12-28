@@ -26,7 +26,9 @@ class EasemobClass {
 		$this->app_name = isset ( $options ['app_name'] ) ? $options ['app_name'] : '';
 		if (! empty ( $this->org_name ) && ! empty ( $this->app_name )) {
 			$this->url = 'https://a1.easemob.com/' . $this->org_name . '/' . $this->app_name . '/';
-		}
+		}else(
+			abort('403','Uses Easemob Without Configs! ~');
+		)
 	}
 	/**
 	* 开放注册模式
