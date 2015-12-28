@@ -13,22 +13,6 @@ composer require aobozhang/EasemobFacades
 php artisan vendor:publish
 ```
 
-## Usage  
-
-```php
-use Easemob;
-
-...
-
-$options = [
-    'username' => 'test_username',
-    'password' => 'test_password'
-];
-
-return Easemob::accreditRegister($options);
-
-```  
-
 ## Configuration  
 
 Modify "config\app.php"  
@@ -51,8 +35,26 @@ Modify "config\app.php"
 
 ```  
 
-> <strong>Till now, you can use it In Test Account Supply by [http://github/easemob/](http://github/easemob/)
-</strong>
+> <strong>Till now, you can use it </strong>  
+> Test Account Supply by [http://github/easemob/](http://github/easemob/)
+
+
+
+## Usage  
+
+```php
+use Easemob;
+
+...
+
+$options = [
+    'username' => 'test_username',
+    'password' => 'test_password'
+];
+
+return Easemob::accreditRegister($options);
+
+```  
 
 ## To Use Your Own Configuration  
 
