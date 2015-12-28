@@ -29,5 +29,9 @@ class EasemobServiceProvider extends ServiceProvider {
         $this->app->singleton('easemobClass', function($app){
             return new EasemobClass($app['config']['easemob']);
         });
+
+        $this->app->booting( function(){
+                    $aliases = \'Easemob';
+                });
     }
 }
