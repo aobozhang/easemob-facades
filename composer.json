@@ -1,18 +1,27 @@
 {
     "name": "aobozhang/easemob-facades",
     "description": "used Easemob as laravel facades",
-    "authors": [
-        {
-            "name": "Aobo",
-            "email": "aobozhang@gmail.com"
-        }
-    ],
+    "keywords": ["easemob", "Easemob", "laravel", "facades"],
+    "type": "library",
+    "homepage": "https://github.com/aobozhang",
+    "license": "MIT",
     "require": {
         "php": ">=5.4.0"
     },
+    "authors": [
+        {
+            "name": "Aobo",
+            "email": "aobozhang@gmail.com",
+            "homepage": "https://github.com/aobozhang",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Aobo\\Easemob\\": "src/"
         }
+    },
+    "suggest": {
+        "laravel/framework": "5.2.*"
     }
 }
