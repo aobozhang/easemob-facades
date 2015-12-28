@@ -1,5 +1,8 @@
+# [STOP USE IT]  
+# [SDK used UPDATE Recently]  
 # easemob-facades for laravel
 used Easemob as Normal laravel facades
+
 
 [![Latest Stable Version](https://poser.pugx.org/aobozhang/easemob-facades/v/stable)](https://packagist.org/packages/aobozhang/easemob-facades) [![Total Downloads](https://poser.pugx.org/aobozhang/easemob-facades/downloads)](https://packagist.org/packages/aobozhang/easemob-facades) [![Latest Unstable Version](https://poser.pugx.org/aobozhang/easemob-facades/v/unstable)](https://packagist.org/packages/aobozhang/easemob-facades) [![License](https://poser.pugx.org/aobozhang/easemob-facades/license)](https://packagist.org/packages/aobozhang/easemob-facades)
 
