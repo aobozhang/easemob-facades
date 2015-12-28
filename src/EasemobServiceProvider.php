@@ -23,15 +23,27 @@ class EasemobServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->publishes([
+
             __DIR__.'/config/easemob.php' => config_path('easemob.php'),
+
         ]);
 
-        $this->app->singleton('easemobClass', function($app){
+        $this->app->singleton('easemob', function($app){
+
             return new EasemobClass($app['config']['easemob']);
+
         });
 
-        $this->app->booting( function(){
-                    $aliases = \'Easemob';
-                });
+        $this->app->booting( function($app){
+
+            $aliases = $app['config']['aliases'];
+
+            if(empty($aliases['Easemob'])){
+
+                $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+                $loader->alias('Easemob','Aobo\Easemob\Facades\Easemob');
+
+            }
+        });
     }
 }
