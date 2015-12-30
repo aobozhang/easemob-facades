@@ -1,5 +1,3 @@
-# [STOP USE IT]  
-# [SDK used UPDATE Recently]  
 # easemob-facades for laravel
 used Easemob as Normal laravel facades
 
