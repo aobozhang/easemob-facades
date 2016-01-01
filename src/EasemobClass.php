@@ -815,11 +815,9 @@ class EasemobClass
 		if(!empty($ql)){
 			$url=$this->url.'chatmessages?ql='.$ql.'&limit='.$limit.'&cursor='.$cursor;
 		}
-		$header=array($this->getToken());
-		$result=$this->postCurl($url,'',$header,"GET");
-		$cursor=$result["cursor"];
-		$this->writeCursor("chatfile.txt",$cursor);
-		//var_dump($GLOBALS['cursor'].'00000000000000');
+        $header = array($this->getToken());
+        $result = $this->postCurl($url,'',$header,"GET");
+        $cursor = isset($result["cursor"])?$result["cursor"]:'';
 		return $result;
 	}
 
