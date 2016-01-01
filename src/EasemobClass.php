@@ -44,7 +44,6 @@ class EasemobClass
 			$url=$this->url.'token';
 			//$url=$base_url.'token';
 			$tokenResult = $this->postCurl($url,$body,$header=array());
-			var_dump($tokenResult['expires_in']);
 			// return $tokenResult;
 			return "Authorization:Bearer ".$tokenResult['access_token'];
 
