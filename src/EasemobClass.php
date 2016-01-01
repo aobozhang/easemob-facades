@@ -817,7 +817,6 @@ class EasemobClass
 		}
         $header = array($this->getToken());
         $result = $this->postCurl($url,'',$header,"GET");
-        $cursor = isset($result["cursor"])?$result["cursor"]:'';
 		return $result;
 	}
 
