@@ -228,7 +228,6 @@ class EasemobClass
 	public function showFriends($username){
 		$url=$this->url.'users/'.$username.'/contacts/users';
 		$header=array($this->getToken());
-		$header = [];
 		$result=$this->postCurl($url,'',$header,'GET');
 		return $result;
 
@@ -891,7 +890,7 @@ class EasemobClass
 			//重新获取并设置
 			$header[0] = array($this->getToken())[0];
 			curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
-			//再次执行
+			//再次执行，为避免死循环，仅重试一次；
 			$res=curl_exec($ch);
 		}
 
