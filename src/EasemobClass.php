@@ -228,6 +228,7 @@ class EasemobClass
 	public function showFriends($username){
 		$url=$this->url.'users/'.$username.'/contacts/users';
 		$header=array($this->getToken());
+		$header = [];
 		$result=$this->postCurl($url,'',$header,'GET');
 		return $result;
 
@@ -882,6 +883,17 @@ class EasemobClass
 
 		//3.抓取URL并把它传递给浏览器
 		$res=curl_exec($ch);
+		//aobo: 增加校验失败检查，自动重新获取token并上传
+		$info = curl_getinfo($ch);
+		if($info["http_code"] === 401){  //校验状态及错误码
+			//aobo:清除本地保存的token
+			Cache::forget('easemob_token');
+			//重新获取并设置
+			$header[0] = array($this->getToken())[0];
+			curl_setopt($ch,CURLOPT_HTTPHEADER,$header);
+			//再次执行
+			$res=curl_exec($ch);
+		}
 
 		$result=json_decode($res,true);
 		//4.关闭curl资源，并且释放系统资源
