@@ -228,7 +228,6 @@ class EasemobClass
 	public function showFriends($username){
 		$url=$this->url.'users/'.$username.'/contacts/users';
 		$header=array($this->getToken());
-		$header = [];
 		$result=$this->postCurl($url,'',$header,'GET');
 		return $result;
 
