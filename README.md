@@ -9,7 +9,7 @@ used Easemob as Normal laravel facades
 * First:  
 
 ```
-composer require aobozhang/EasemobFacades
+composer require aobozhang/easemob-facades
 ```
 
 * Second:  
